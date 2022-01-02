@@ -10,7 +10,7 @@
     });
 
     const addTodos = () => {
-        todos = [...todos, todoText];
+        todos = [...todos, todoText].filter((todo) => todo);
         localStorage.setItem('todos', JSON.stringify(todos));
         todoText = '';
     };
@@ -29,7 +29,7 @@
         <button on:click={deleteTodos}>Delete all</button>
     </form>
 
-    {#if todos.length === 1}
+    {#if !todos.length}
         <p>Nothing to display</p>
     {:else}
         <ul>
