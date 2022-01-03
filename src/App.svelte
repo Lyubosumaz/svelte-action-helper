@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
     import Todo from './Todo.svelte';
-    export let name;
+    export let name: string;
 </script>
 
 <main>
