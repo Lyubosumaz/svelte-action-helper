@@ -1,6 +1,6 @@
 {
-  "name": "svelte-app",
-  "version": "1.0.0",
+  "name": "svelte-action-helper",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "build": "rollup -c",
@@ -9,23 +9,29 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.0"
+    "sirv-cli": "^2.0.1"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-node-resolve": "^11.0.0",
-    "@rollup/plugin-typescript": "^8.0.0",
-    "@tsconfig/svelte": "^2.0.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.2",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@tsconfig/svelte": "^3.0.0",
+    "@types/rollup-plugin-css-only": "^3.1.0",
+    "@types/sass": "^1.43.1",
+    "@types/tailwindcss": "^3.0.1",
     "@types/typescript": "^2.0.0",
-    "rollup": "^2.3.4",
+    "autoprefixer": "^10.4.1",
+    "postcss": "^8.4.5",
+    "rollup": "^2.62.0",
     "rollup-plugin-css-only": "^3.1.0",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-svelte": "^7.0.0",
-    "rollup-plugin-terser": "^7.0.0",
-    "svelte": "^3.0.0",
-    "svelte-check": "^2.0.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-svelte": "^7.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.45.2",
+    "svelte": "^3.44.3",
+    "svelte-check": "^2.2.11",
     "svelte-preprocess": "^4.10.1",
-    "tslib": "^2.0.0",
-    "typescript": "^4.0.0"
+    "tailwindcss": "^3.0.9",
+    "typescript": "^4.5.4"
   }
 }

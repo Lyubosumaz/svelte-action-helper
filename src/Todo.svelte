@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte';
 
-    let todos = [];
-    let todoText = '';
+    let todos: string[] = [];
+    let todoText: string = '';
 
     onMount(() => {
         const existingTodos = localStorage.getItem('todos');
@@ -17,7 +17,7 @@
 
     const deleteTodos = () => {
         todos = [];
-        localStorage.setItem('todos', []);
+        localStorage.setItem('todos', null);
     };
 </script>
 
@@ -29,24 +29,25 @@
         <button on:click={deleteTodos}>Delete all</button>
     </form>
 
-    {#if !todos.length}
-        <p>Nothing to display</p>
-    {:else}
+    {#if todos.length}
         <ul>
             {#each todos as todo, i}
                 <li>{i + 1}. {todo}</li>
             {/each}
         </ul>
+    {:else}
+        <p>Nothing to display</p>
     {/if}
 </section>
 
-<style>
+<style lang="scss">
     section {
         margin-top: 6em;
         padding-top: 2em;
         border-top: 0.1em solid #414141;
-    }
-    ul {
-        list-style: none;
+
+        ul {
+            list-style: none;
+        }
     }
 </style>
