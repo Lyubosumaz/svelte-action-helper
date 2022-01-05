@@ -1,15 +1,19 @@
 {
    "root": true,
    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
       "airbnb-typescript/base",
       "plugin:prettier/recommended",
       "prettier"
    ],
    "parser": "@typescript-eslint/parser",
-   "parserOptions": {
-      "project": "./tsconfig.json"
-   },
+   "plugins": [
+      "@typescript-eslint"
+   ],
    "rules": {
+      "no-console": 2, // Remember, this means error!
       "import/prefer-default-export": "off",
       "class-methods-use-this": "off",
       "import/no-extraneous-dependencies": [
